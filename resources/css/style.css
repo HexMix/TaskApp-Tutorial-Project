@@ -1,0 +1,245 @@
+@charset "UTF-8";
+
+body, input, button {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: rgb(213, 218, 221);
+    padding: 80px 0 0 0 ;
+}
+
+header {
+        width: 100%;
+        height: 60px;
+        position: fixed;
+        padding: 15px;
+        top: 0;
+        left: 0;
+        z-index: 5;
+        font-weight: 4;
+        background: #25b99a;
+        box-shadow: 0px 2px 4px rgba(44,62,80,0.15);
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+
+    header input {
+        width: 100%;
+        height: 50px;
+        color: #ffffff;
+        font-weight: 400;
+        font-size: 15px;
+        text-indent: 18px;
+        background: rgba(255,255,255,0.2);
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 25px;
+        border: 0px;
+        box-shadow:none;
+        outline:none;
+        appearance: none;
+
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        -ms-appearance: none;
+        -o-appearance: none;
+        appearance: none;
+    }
+
+    /* Compatability */
+
+    header input::-webkit-input-placeholder {
+        color: rgba(255,255,255,0.75);
+    }
+
+    header input::-moz-input-placeholder {
+        color: rgba(255,255,255,0.75);
+    }
+
+    header input:-moz-input-placeholder {
+        color: rgba(255,255,255,0.75);
+    }
+
+    header input:-ms-input-placeholder {
+        color: rgba(255,255,255,0.75);
+    }
+
+    header button {
+        width: 50px;
+        height: 50px;
+        top: 15px;
+        right: 55px;
+        z-index: 2;
+        position: absolute;
+        border-radius: 25px;
+        background: #ffffff;
+        border: 0px;
+        box-shadow: none;
+        outline: none;
+        cursor: pointer;
+
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        -ms-appearance: none;
+        -o-appearance: none;
+        appearance: none;
+    }
+
+    header button svg {
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: -8px 0 0 -8px;
+    }
+
+    header button svg .fill {
+        fill: #25b99a;
+    }
+    .flex-container {
+        display: flex;
+        flex-wrap: nowrap;
+        margin-right: 40px;
+    }
+
+    .flex-container > div {
+        width: 100%;
+        text-align: center;
+      }
+
+
+.container {
+width: 100%;
+display: flex;
+padding: 15px;
+padding-right: 30px;
+
+}
+
+ul.todo {
+    width: 100%;
+    float: left;
+    padding-top: 10px;
+}
+
+ul.todo li {
+
+    height: 40px;
+    min-height: 40px;
+    width: 80%;
+    min-width: 250px;
+    padding: 18px 24px 1px;
+    display: flex;
+    font-size: 14px;
+    font-weight: 500;
+    color: #444;
+    line-height: 22px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0px 1px 2px rgba(44,62,80,0.15);
+    margin: 0 0 10px;
+    list-style-type: none;
+    position: relative;
+
+}
+
+ul.todo li:last-of-type {
+    margin: 0;
+}
+
+ul.todo .buttons {
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+ul.todo .buttons button {
+    width: 50px;
+    height: 50px;
+    float: left;
+    background: none;
+    position: relative;
+    border: 0px;
+    box-shadow: none;
+    outline: none;
+    cursor:pointer;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+}
+
+ul.todo .buttons button:last-of-type:before {
+  content: '';
+  width: 1px;
+  height: 30px;
+  position: absolute;
+  left: 5%;
+  top: 10px;
+  background: rgb(203, 214, 216);
+}
+
+ul.todo li .buttons button svg {
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    margin: -11px 0 0 11px;
+
+}
+
+ul.todo li .buttons button.complete svg {
+    border-radius: 11px;
+    border: 1.5px solid #25b99a;
+
+    transition: background-color 0.2s ease;
+
+}
+
+ul.todo#completed li .buttons button.complete svg {
+    background: #25b99a;
+    border: 0px;
+    
+}
+
+ul.todo:not(#completed) li .buttons button.complete:hover svg {
+    background: rgba(49, 233, 193, 0.75);
+}
+
+ul.todo:not(#completed) li .buttons button.completed:hover svg .fill {
+    fill: #ffffff;
+}
+
+
+ul.todo#completed li .buttons button.complete svg .fill {
+    fill: #ffffff;
+
+}
+
+ul.todo li .buttons button svg .fill {
+    -webkit-transition:fill 0.2s ease;
+    -moz-transition:fill 0.2s ease;
+    -ms-transition:fill 0.2s ease;
+    transition: fill 0.2s ease;
+}
+
+ul.todo li .buttons button.remove svg .fill {
+    fill: #c0cecb;
+}
+
+ul.todo li .buttons button.remove:hover .fill {
+    fill: #e85656;
+}
+
+ul.todo li .buttons button.complete svg .fill {
+    fill: #25b99a;
+}
+
