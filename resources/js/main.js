@@ -9,6 +9,7 @@ document.getElementById('add').addEventListener('click', function() {
     var value = document.getElementById('item').value;
     if (value) {
       addItemToDo(value);
+      document.getElementById('item').value = '';
     }
   });
   
@@ -17,7 +18,7 @@ document.getElementById('add').addEventListener('click', function() {
       var list = document.getElementById('todo');
 
       var item = document.createElement('li');
-      item.InnerText = text;
+      item.innerText = text;
 
       var buttons = document.createElement('div');
       buttons.classList.add('buttons');
@@ -34,5 +35,5 @@ document.getElementById('add').addEventListener('click', function() {
       buttons.appendChild(complete);
       item.appendChild(buttons);
 
-      list.appendChild(item);
+      list.insertBefore(item, list.childNodes[0]);
   }
